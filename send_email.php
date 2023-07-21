@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST["message"];
 
     // Change the following variables to your desired values
-    $recipient_email = "recipient@example.com";
+    $recipient_email = "guycr94@gmailcom";
     $subject = "New Message from $name";
     $headers = "From: $name <$email>\r\nReply-To: $email\r\n";
 
