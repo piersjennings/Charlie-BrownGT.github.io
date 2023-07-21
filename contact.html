@@ -9,7 +9,7 @@
 
 <body>
     <h1>Contact Form</h1>
-    <form action="send_email.php" method="post">
+    <form id="contact-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
 
@@ -21,10 +21,36 @@
 
         <button type="submit">Send Message</button>
     </form>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        emailjs.init("YOUR_EMAILJS_USER_ID");
+
+        // Function to send the email
+        function sendEmail(event) {
+            event.preventDefault();
+
+            // Get the form data
+            const formData = new FormData(event.target);
+
+            // Replace YOUR_EMAILJS_SERVICE_ID, YOUR_EMAILJS_TEMPLATE_ID, and YOUR_EMAILJS_USER_ID with your EmailJS credentials
+            emailjs.sendForm("YOUR_EMAILJS_SERVICE_ID", "YOUR_EMAILJS_TEMPLATE_ID", formData)
+                .then(function(response) {
+                    console.log("Email sent successfully:", response);
+                    alert("Your message has been sent successfully!");
+                }, function(error) {
+                    console.error("Failed to send email:", error);
+                    alert("Sorry, there was an error sending your message.");
+                });
+
+            // Clear the form after submission
+            event.target.reset();
+        }
+
+        // Attach the sendEmail function to the form's submit event
+        document.getElementById("contact-form").addEventListener("submit", sendEmail);
+    </script>
 </body>
 
 </html>
-
-
-
-    
