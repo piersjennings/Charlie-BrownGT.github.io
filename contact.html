@@ -4,67 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
-    <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        main {
-            padding: 2rem;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-    </style>
+    <title>Contact Form</title>
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to My Simple Website</h1>
-    </header>
+    <h1>Contact Form</h1>
+    <form action="send_email.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
 
-    <main>
-        <h2>About Me</h2>
-        <p>Hello! I am a web enthusiast and this is my simple website. Feel free to explore and learn more about me.</p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
 
-        <h2>Contact Me</h2>
-        <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 My Simple Website. All rights reserved.</p>
-    </footer>
+        <button type="submit">Send Message</button>
+    </form>
 </body>
 
 </html>
+
 
 
     
