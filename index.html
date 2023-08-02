@@ -9,6 +9,53 @@
         
     </head>
 
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+  }
+
+  #content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+</style>
+<title>Sidebar Example</title>
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  
+  <div id="content">
+    <h1>Main Content</h1>
+    <p>This is the main content area. You can add your content here.</p>
+  </div>
+</body>
+</html>
+In this example, the sidebar is created using a div element with the id of "sidebar". The CSS styles for the sidebar give it a fixed position on the left side of the viewport, along with a specific width, background color, and padding.
+
+The main content area is created using another div element with the id of "content". The CSS styles for the content area include a left margin to make space for the sidebar, and padding to provide some spacing around the content.
+
+You can customize the styles, content, and links in the sidebar and main content area to suit your needs. This example provides a starting point for creating a simple sidebar layout.
+
+
+
+
+
+
+
     <body>
         <a display:inline href="./index">Home</a>
         <a display:inline href="./about">About</a>
